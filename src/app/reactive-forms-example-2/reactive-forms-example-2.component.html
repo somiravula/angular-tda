@@ -1,0 +1,10 @@
+<h4>Forms 2</h4>
+
+<form [formGroup]="fg">
+  <h4>First Name</h4>
+  <input type="text" [formControlName]="'firstName'" />
+  <h4>Interesets</h4>
+    <ng-container [formArrayName]="'interests'" *ngFor="let item of dbData; let i = index;">
+     <input type="checkbox" [formControlName]="i" /> {{item}}
+    </ng-container>
+</form>
