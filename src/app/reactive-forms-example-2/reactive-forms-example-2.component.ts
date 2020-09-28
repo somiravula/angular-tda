@@ -17,8 +17,16 @@ export class ReactiveFormsExample2Component  {
       interests: this.fb.array(this.dbData.map(i => this.fb.control(true)))
     });
 
+//to get controle
     this.fg.get('firstName').valueChanges.subscribe(value => {
       console.log("Firstname: " + value);
+
     })
+//to get final value
+   console.log(this.fg.get('interests').value);
+  // this.fg.setValue({firstName:'Nilima',interests:[true,false,true]});
+  this.fg.patchValue({firstName:'Nilu'})
   }
+
+  
 }
