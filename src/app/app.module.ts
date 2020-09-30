@@ -8,10 +8,11 @@ import { ReactiveFormsExampleComponent } from './reactive-forms-example/reactive
 import { ReactiveFormsExample2Component } from './reactive-forms-example-2/reactive-forms-example-2.component';
 import { Reactiveformexample3Component } from './reactiveformexample3/reactiveformexample3.component';
 import { Example4Component } from './example4/example4.component';
+import { NestedFormComponent } from './nested-form/nested-form.component';
 
 @NgModule({
   imports:      [ BrowserModule, FormsModule, ReactiveFormsModule ],
-  declarations: [ AppComponent, HelloComponent, ReactiveFormsExampleComponent, ReactiveFormsExample2Component, Reactiveformexample3Component, Example4Component ],
+  declarations: [ AppComponent, HelloComponent, ReactiveFormsExampleComponent, ReactiveFormsExample2Component, Reactiveformexample3Component, Example4Component, NestedFormComponent ],
   bootstrap:    [ AppComponent ]
 })
 export class AppModule { }
