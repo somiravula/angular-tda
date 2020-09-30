@@ -1,0 +1,10 @@
+<form [formGroup]="example3Form"> 
+  FirstName
+  <input type="text" formControleName="firstName"><br>
+  Last name
+<input type="text" formControleName="lastname">
+<br>
+<ng-container formArrayName="hobbies" *ngFor="let data of hobby;let i=index">
+  <input type="checkbox" formControleName="i">{{data}}
+</ng-container>
+</form>

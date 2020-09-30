@@ -1,0 +1,21 @@
+<form [formGroup]="form4">
+  <h4>Username</h4>
+  <input formControlName="username">
+  <h4>Pasword</h4>
+   <input formControlName="password" type="password">
+   <br>
+   <h4>Courses:</h4>
+   <ng-container formArrayName="courses1" *ngFor="let data of courses;let i=index">
+    <input type="checkbox" formControlname="i">{{data}}
+   </ng-container>
+   <br>
+   <br>
+   <input type="button" value="Add" (click)="show()"/>
+<br>
+<br>
+<div>
+  Username:{{username}} <br>
+  password:{{paswword}}<br>
+  Courseselected:{{course}}
+</div>
+</form>
