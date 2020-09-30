@@ -37,7 +37,8 @@ course;
 show()
 {
   debugger
-  console.log(this.form4.get('courses1').value)
+  console.log(this.form4)
+  this.form4.get('username').disable();
 this.username=this.form4.get('username').value;
 this.paswword=this.form4.get('password').value;
 this.course=this.form4.get('courses1').value;
