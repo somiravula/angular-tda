@@ -36,8 +36,13 @@ course;
   }
 show()
 {
+  //there are two ways to access form control value
+  //1.using get method
+  console.log(this.form4.get('username').value)
+  //2.using contole.propertyname
+  console.log(this.form4.controls.username.value)
   debugger
-  console.log(this.form4)
+  //console.log(this.form4)
   this.form4.get('username').disable();
 this.username=this.form4.get('username').value;
 this.paswword=this.form4.get('password').value;
