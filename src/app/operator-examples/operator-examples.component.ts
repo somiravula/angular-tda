@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { combineLatest, interval, of, timer } from 'rxjs';
-import { filter,map, mapTo, take } from 'rxjs/operators';
+import { combineLatest, fromEvent, interval, of, timer } from 'rxjs';
+import { filter,map, mapTo, switchMap, take } from 'rxjs/operators';
 
 @Component({
   selector: 'app-operator-examples',
@@ -51,7 +51,15 @@ export class OperatorExamplesComponent implements OnInit {
 
 //swith map
 //On each emission the previous inner observable (the result of the function you supplied) is cancelled and the new observable is subscribed. You can remember this by the phrase switch to a new observable.
-
+fromEvent(document, 'click')
+  .pipe(
+    // restart counter on every click
+    switchMap(() => interval(1000)),
+    take(30)
+  )
+  .subscribe(console.log);
+  
+  
      }
 
 
