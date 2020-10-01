@@ -44,7 +44,6 @@ export class NestedFormwithFormBuilderComponent implements OnInit {
 
   addnewSkills() {
    this.skills.push(this.AddSkill());
-     console.log(this.nestedForm.value);
 } 
 get skills() : FormArray {
   return this.nestedForm.get("skills") as FormArray
