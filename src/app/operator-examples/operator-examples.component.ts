@@ -49,6 +49,9 @@ export class OperatorExamplesComponent implements OnInit {
     // const numbers = timer(3000, 10000);
     // numbers.subscribe(x => console.log(x));
 
+//swith map
+//On each emission the previous inner observable (the result of the function you supplied) is cancelled and the new observable is subscribed. You can remember this by the phrase switch to a new observable.
+
      }
 
 
