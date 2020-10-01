@@ -5,13 +5,15 @@
 <input type="text"  formControlName="email">
 <br>
 <br>
-<input type="button" value="Add Skill" (click)="addnewSkills()">
+<input type="button" value="Add Skill" (click)="addnewSkills()"> 
+
 <div formArrayName="skills">
     <div *ngFor="let skill of skills.controls; let i=index">
-<div formGroupName="i">
+<div [formGroupName]="i">
   <hr>
+  <button  (click)="removeSkill(i)">Remove Skill</button>
 <h4>Skillname</h4>
-<input type="text" formControlName="skillname">
+<input type="text" formControlName="skillname" >
 <h4>Experience</h4>
 <input type="text" formControlName="experience">
 <br>
@@ -21,6 +23,8 @@
 <input type="radio" value="Expert" formControlName="proficiency">Expert
 
 </div>
+
+
 </div>
 </div>
 

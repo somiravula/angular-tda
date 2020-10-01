@@ -45,14 +45,16 @@ export class NestedFormwithFormBuilderComponent implements OnInit {
   addnewSkills() {
    this.skills.push(this.AddSkill());
      console.log(this.nestedForm.value);
-}
-
-
-3
-4
-5
- 
+} 
 get skills() : FormArray {
   return this.nestedForm.get("skills") as FormArray
+}
+Save()
+{
+   console.log(this.nestedForm.value);
+}
+removeSkill(i)
+{
+  this.skills.removeAt(i);
 }
 }
