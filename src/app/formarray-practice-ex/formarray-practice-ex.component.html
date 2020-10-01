@@ -1,0 +1,19 @@
+<form [formGroup]="reactiveform">
+  <input type="button" (click)="addMovie()" value="AddNew"><br><br>
+
+  <div formArrayName="movies">
+    <div *ngFor="let movie of movie.controls;let j=index">
+      <div [formGroupName]="j">
+        <h4>Movie name</h4>
+        <input type="text" formControlName="movieName" >
+        <h4>Ratings</h4>
+      <input type="text" formControlName="ratings" >
+              <h4>Type</h4>
+      <input type="text" formControlName="type" >
+      <hr>
+      </div>
+    </div>
+    </div>
+
+
+</form>

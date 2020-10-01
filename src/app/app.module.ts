@@ -10,10 +10,11 @@ import { Reactiveformexample3Component } from './reactiveformexample3/reactivefo
 import { Example4Component } from './example4/example4.component';
 import { NestedFormComponent } from './nested-form/nested-form.component';
 import { NestedFormwithFormBuilderComponent } from './nested-formwith-form-builder/nested-formwith-form-builder.component';
+import { FormarrayPracticeExComponent } from './formarray-practice-ex/formarray-practice-ex.component';
 
 @NgModule({
   imports:      [ BrowserModule, FormsModule, ReactiveFormsModule ],
-  declarations: [ AppComponent, HelloComponent, ReactiveFormsExampleComponent, ReactiveFormsExample2Component, Reactiveformexample3Component, Example4Component, NestedFormComponent, NestedFormwithFormBuilderComponent ],
+  declarations: [ AppComponent, HelloComponent, ReactiveFormsExampleComponent, ReactiveFormsExample2Component, Reactiveformexample3Component, Example4Component, NestedFormComponent, NestedFormwithFormBuilderComponent, FormarrayPracticeExComponent ],
   bootstrap:    [ AppComponent ]
 })
 export class AppModule { }
