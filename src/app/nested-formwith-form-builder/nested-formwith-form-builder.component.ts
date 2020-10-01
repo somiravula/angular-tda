@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormArray, FormBuilder, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-nested-formwith-form-builder',
@@ -42,4 +42,17 @@ export class NestedFormwithFormBuilderComponent implements OnInit {
         })
   }
 
+  addnewSkills() {
+   this.skills.push(this.AddSkill());
+     console.log(this.nestedForm.value);
+}
+
+
+3
+4
+5
+ 
+get skills() : FormArray {
+  return this.nestedForm.get("skills") as FormArray
+}
 }
